@@ -2,6 +2,8 @@
 Art Game System Template
 # 이름
  * 원아름 <reumia19@naver.com>
+ * 홈페이지 https://reumia19.github.io/ArtGameSystem/
+ * 팀프로젝트 - snake : 치열하게 업로드 완료
  
 # 추가된 외부 라이브러리
  * p5.play <http://molleindustria.github.io/p5.play/>
