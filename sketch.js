@@ -30,7 +30,6 @@ let end;
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
-  noCursor();
 
     scoreElem = createDiv('1P Score = 0');
   scoreElem.position(windowWidth/2-250, 40);
