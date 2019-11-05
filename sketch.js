@@ -33,14 +33,14 @@ function setup() {
   noCursor();
 
     scoreElem = createDiv('1P Score = 0');
-  scoreElem.position(windowWidth/2-250, 20);
+  scoreElem.position(windowWidth/2-250, 40);
   scoreElem.id = 'score1P';
   scoreElem.style('color', 'white');
 
   scoreElem2 = createDiv('2P Score = 0');
-  scoreElem2.position(windowWidth/2+100, 20);
+  scoreElem2.position(windowWidth/2+140, 40);
   scoreElem2.id = 'score2P';
-  scoreElem2.style('color', 'blue');
+  scoreElem2.style('color','pink');
 
   frameRate(15);
   strokeWeight(10);
@@ -67,7 +67,7 @@ function draw() {
   for (let i = 0; i < numSegments - 1; i++) {
     line(xCor[i], yCor[i], xCor[i + 1], yCor[i + 1]);
   }
-    stroke(0,0,255);
+    stroke(210,150,150);
     for (let i = 0; i < num2Segments - 1; i++) {
     line(xCor2[i], yCor2[i], xCor2[i + 1], yCor2[i + 1]);
     }
@@ -183,7 +183,7 @@ function checkGameStatus() {
     else if(scoreElem.html().substring(11)*1 ==scoreElem2.html().substring(11)*1 )
     { //동점일 경우
     end = createDiv('DRAW..');
-      end.position(windowWidth/2-100, 50);
+      end.position(windowWidth/2-20, 50);
     end.id = 'scoreEnd';
     end.style('color', 'white');
   }
