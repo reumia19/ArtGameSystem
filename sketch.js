@@ -33,12 +33,12 @@ function setup() {
   noCursor();
 
     scoreElem = createDiv('1P Score = 0');
-  scoreElem.position(20, 20);
+  scoreElem.position(windowWidth/2-250, 20);
   scoreElem.id = 'score1P';
   scoreElem.style('color', 'white');
 
   scoreElem2 = createDiv('2P Score = 0');
-  scoreElem2.position(400, 20);
+  scoreElem2.position(windowWidth/2+100, 20);
   scoreElem2.id = 'score2P';
   scoreElem2.style('color', 'blue');
 
@@ -151,7 +151,7 @@ function checkGameStatus() {
  if(checkSnakeCollision() // 뱀1이 자신의 몸에 충돌할 경우
   ){
     end = createDiv('Game ended! Player 2 Win');
-    end.position(180, 50);
+    end.position(windowWidth/2-100, 50);
     end.id = 'scoreEnd';
     end.style('color', 'white');
 }
@@ -159,7 +159,7 @@ function checkGameStatus() {
   else if(checkSnakeCollision2() // 뱀2이 자신의 몸에 충돌할 경우
   ){
     end = createDiv('Game ended! Player 1 Win');
-    end.position(180, 50);
+    end.position(windowWidth/2-100, 50);
     end.id = 'scoreEnd';
     end.style('color', 'white');
 }
@@ -168,13 +168,13 @@ function checkGameStatus() {
   
   else if(scoreElem.html().substring(11)*1>scoreElem2.html().substring(11)*1){
     end = createDiv('Game ended! Player 1 Win');
-    end.position(180, 50);
+    end.position(windowWidth/2-100, 50);
     end.id = 'scoreEnd';
     end.style('color', 'white');
   }
     else if(scoreElem.html().substring(11)*1<scoreElem2.html().substring(11)*1){
     end = createDiv('Game ended! Player 2 Win');
-    end.position(180, 50);
+    end.position(windowWidth/2-100, 50);
     end.id = 'scoreEnd';
     end.style('color', 'white');
     
@@ -183,7 +183,7 @@ function checkGameStatus() {
     else if(scoreElem.html().substring(11)*1 ==scoreElem2.html().substring(11)*1 )
     { //동점일 경우
     end = createDiv('DRAW..');
-      end.position(240, 50);
+      end.position(windowWidth/2-100, 50);
     end.id = 'scoreEnd';
     end.style('color', 'white');
   }
