@@ -1,7 +1,7 @@
 # ArtGameSystem
 Art Game System Template
 # 이름
- * 원아름
+ * 원아름 <reumia19@naver.com>
  
 # 추가된 외부 라이브러리
  * p5.play <http://molleindustria.github.io/p5.play/>
