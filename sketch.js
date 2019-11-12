@@ -8,7 +8,8 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
 
-
+ paddleA = createSprite(30, height/2, 10, 100);
+ paddleA.immovable = true;
 
 }
 
