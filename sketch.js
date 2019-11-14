@@ -54,6 +54,10 @@ function mousePressed() {
   //create a sprite at the mouse position and store it in a temporary variable
 
   s = createSprite(mouseX, mouseY, 30, 30);
+  s.setCollider('circle', -2, 2, 55);
+  s.scale = random(0.5, 1);
+
+
   //if no image or animation is associated it will be a rectancle of the specified size
   //and a random color
 
