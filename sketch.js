@@ -8,8 +8,6 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
 
- paddleA = createSprite(30, height/2, 10, 100);
- paddleA.immovable = true;
 
 }
 
@@ -26,6 +24,7 @@ function draw() {
 function mousePressed() {
 
   //create a sprite at the mouse position and store it in a temporary variable
+
   var s = createSprite(mouseX, mouseY, 30, 30);
   //if no image or animation is associated it will be a rectancle of the specified size
   //and a random color
