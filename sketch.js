@@ -8,6 +8,8 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
   
+  var s = new Group();
+  
 
 }
 
@@ -25,13 +27,12 @@ function mousePressed() {
 
   //create a sprite at the mouse position and store it in a temporary variable
 
-  this.s = createSprite(mouseX, mouseY, 30, 30);
+  s = createSprite(mouseX, mouseY, 30, 30);
   //if no image or animation is associated it will be a rectancle of the specified size
   //and a random color
-   this.s.setCollider('s', -30, 30, 55);
 
   //now you can use the variable to set properties
   //e.g. a random velocity on the x and y coordinates
-  this.s.velocity.x = random(-5, 5);
-  this.s.velocity.y = random(-5, 5);
+  s.velocity.x = random(-5, 5);
+  s.velocity.y = random(-5, 5);
 }
