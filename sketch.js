@@ -7,8 +7,7 @@ var sp;
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
-  
-    s = new Group();
+
  }
 
 function draw() {
@@ -57,5 +56,4 @@ function mousePressed() {
     sp.setSpeed(random(2, 3), random(0, 360));
     sp.scale = random(0.5, 1);
     sp.mass = sp.scale;
-    sp.add(s);
 }
