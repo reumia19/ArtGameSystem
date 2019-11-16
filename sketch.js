@@ -19,7 +19,6 @@ function draw() {
   textAlign(CENTER);
   text('Click to create a new sprite', width/2, height/2);
 
-  s.bounce(s);
 
   for(var i=0; i<allSprites.length; i++) {
     var s = allSprites[i];
@@ -45,6 +44,7 @@ function draw() {
       s.position.y = height-1;
       s.velocity.y = -abs(s.velocity.y);
     }
+    s.bounce(allSprites);
   }
 
     drawSprites();
