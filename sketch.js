@@ -53,19 +53,11 @@ function draw() {
 
 function mousePressed() {
 
-  //create a sprite at the mouse position and store it in a temporary variable
+    sp = createSprite(mouseX, mouseY,30,30);
+    sp.setCollider("rectangle");
+    sp.setSpeed(random(2, 3), random(0, 360));
 
-  s = createSprite(mouseX, mouseY, 30, 30);
-  s.setCollider('circle', -2, 2, 55);
-  s.scale = random(0.5, 1);
-  s.mass = s.scale;
-  //s.add(s); //용도는 잘 모르겠는데 일단 넣음... 필요하니까 저 사람들도 넣은 거겠지..?
-
-  //if no image or animation is associated it will be a rectancle of the specified size
-  //and a random color
-
-  //now you can use the variable to set properties
-  //e.g. a random velocity on the x and y coordinates
-  s.velocity.x = random(-5, 5);
-  s.velocity.y = random(-5, 5);
+    sp.scale = random(0.5, 1);
+    sp.mass = sp.scale;
+    sp.add(s);
 }
