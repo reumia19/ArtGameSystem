@@ -9,8 +9,7 @@ function setup() {
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
   
     s = new Group();
-
-  }
+ }
 
 function draw() {
   background(255, 255, 255);
@@ -53,7 +52,7 @@ function draw() {
 function mousePressed() {
 
     sp = createSprite(mouseX, mouseY,30,30);
-    sp.shapeColor = color(random(200,255),random(100,150),random(100,150));
+    sp.shapeColor = color(random(200,255),random(100,120),random(100,150));
     sp.setCollider("rectangle");
     sp.setSpeed(random(2, 3), random(0, 360));
     sp.scale = random(0.5, 1);
