@@ -2,7 +2,7 @@ let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
 var s;
-
+var sp;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
