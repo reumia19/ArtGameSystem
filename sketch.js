@@ -8,10 +8,10 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
   
-  var s = new Group();
+    s = new Group();
 
 
-}
+  }
 
 function draw() {
   background(255, 255, 255);
