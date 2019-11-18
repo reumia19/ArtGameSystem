@@ -3,12 +3,13 @@ let canvasWidth = 600;
 let canvasHeight = 400;
 var s;
 var sp;
-var image;
+
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
 
+var image = loadImage('image/picxenk.png');
 }
 
 function draw() {
