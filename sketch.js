@@ -10,9 +10,9 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
 
-var img = loadImage("image/picxenk.png");
+// var img = loadImage("image/picxenk.png");
  imageSprite = createSprite(100, 100);
- imageSprite.addImage(img);
+ // imageSprite.addImage(img);
 
 }
 
