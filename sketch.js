@@ -41,7 +41,7 @@ function draw() {
 
 function createSnow() {
 
-    sp = createSprite(mouseX, mouseY,30,30);
+    sp = createSprite(mouseX, mouseY,20,20);
     sp.shapeColor = color(random(200,255),random(100,120),random(100,150));
     sp.setCollider("rectangle");
     sp.setSpeed(random(2, 3),90 );
