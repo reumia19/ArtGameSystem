@@ -11,7 +11,7 @@ function setup() {
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
 
 var img = loadImage("image/picxenk.png");
- imageSprite = createSprite(100, 100);
+ imageSprite = createSprite(mouseX, mouseY);
  imageSprite.addImage(img);
  imageSprite.setCollider('circle', -2, 2, 55);
 
