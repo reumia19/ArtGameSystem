@@ -11,7 +11,7 @@ function setup() {
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
 
 var image = loadImage('image/picxenk.png');
- imageSprite = createSprite(300, 150);
+ imageSprite = createSprite(mouseX, mouseY);
  imageSprite.addImage(image);
 
 }
