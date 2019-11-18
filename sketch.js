@@ -10,9 +10,9 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
 
-var image = loadImage('assets/explode_sprite_sheet.png');
+var img = loadImage('assets/explode_sprite_sheet.png');
  imageSprite = createSprite(mouseX, mouseY);
- imageSprite.addImage(image);
+ imageSprite.addImage(img);
 
 }
 
