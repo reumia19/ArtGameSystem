@@ -51,7 +51,7 @@ function mousePressed() {
     sp.shapeColor = color(random(200,255),random(100,120),random(100,150));
     sp.setCollider("rectangle");
     sp.setSpeed(random(2, 3), random(0, 360));
-    sp.scale = random(0.5, 1);
+    sp.scale = random(0.2, 0.5);
     sp.mass = sp.scale;
 }
 
