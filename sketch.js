@@ -20,8 +20,7 @@ function draw() {
    fill(0);
   textAlign(CENTER);
   text('Click to create a new sprite', width/2, height/2);
-   var img = loadImage('image/picxenk_cat_n_400x400.png');
-   imageSprite.addImage(img);
+
 
    imageSprite.position.x = mouseX;
    imageSprite.position.y = mouseY;
