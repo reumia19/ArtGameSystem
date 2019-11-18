@@ -52,6 +52,8 @@ function draw() {
   }
     drawSprites();
 
+    imageSprite.debug = mouseIsPressed;
+
 }
 
 function mousePressed() {
