@@ -10,11 +10,9 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
 
-// var img = loadImage("image/picxenk.png");
+var img = loadImage("image/picxenk.png");
  imageSprite = createSprite(100, 100);
- 
- // imageSprite.addImage(img);
- // imageSprite.setCollider('circle', mouseX, mouseY, 100);
+ imageSprite.addImage(img);
 
 }
 
@@ -24,6 +22,9 @@ function draw() {
   textAlign(CENTER);
   text('Click to create a new sprite', width/2, height/2);
  
+   imageSprite.position.x = mouseX;
+   imageSprite.position.y = mouseY;
+
 
   for(var i=0; i<allSprites.length; i++) {
     var s = allSprites[i];
