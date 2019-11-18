@@ -13,6 +13,7 @@ function setup() {
 var img = loadImage("image/picxenk.png");
  imageSprite = createSprite(100, 100);
  imageSprite.addImage(img);
+ imageSprite.setCollider('circle', -2, 2, 55);
 
 }
 
