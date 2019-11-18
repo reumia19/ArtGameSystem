@@ -3,6 +3,7 @@ let canvasWidth = 600;
 let canvasHeight = 400;
 var s;
 var sp;
+var image;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
