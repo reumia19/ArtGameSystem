@@ -33,10 +33,13 @@ function draw() {
 
     s.bounce(allSprites);
   }
+  if(mouseIsPressed){
+    createSnow();
+  }
 
 }
 
-function mousePressed() {
+function createSnow() {
 
     sp = createSprite(mouseX, mouseY,30,30);
     sp.shapeColor = color(random(200,255),random(100,120),random(100,150));
