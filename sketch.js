@@ -40,6 +40,7 @@ function draw() {
       s.velocity.y = -abs(s.velocity.y);
     }
 
+    s.bounce(allSprites);
   }
 
 }
