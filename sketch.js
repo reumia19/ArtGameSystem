@@ -10,7 +10,7 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
 
-var image = loadImage('image/picxenk.png');
+var image = loadImage('assets/explode_sprite_sheet.png');
  imageSprite = createSprite(mouseX, mouseY);
  imageSprite.addImage(image);
 
