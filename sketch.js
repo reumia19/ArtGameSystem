@@ -1,8 +1,16 @@
 let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
-var s;
-var sp;
+
+let frog;
+let car1;
+let goal;
+let sound_hit;
+
+
+function preload() {
+  sound_hit = loadSound('hit.wav');
+}
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
@@ -11,47 +19,60 @@ function setup() {
 }
 
 function draw() {
-  background(255, 255, 255);
-   fill(0);
-  textAlign(CENTER);
-  text('Click to create a new sprite', width/2, height/2);
- 
-  drawSprites();
-
-  for(var i=0; i<allSprites.length; i++) {
-    var s = allSprites[i];
-    if(s.position.x<0) {
-      s.position.x = 1;
-      s.velocity.x = abs(s.velocity.x);
-    }
-
-    if(s.position.x>width) {
-      s.position.x = width-1;
-      s.velocity.x = -abs(s.velocity.x);
-    }
-
-    if(s.position.y<0) {
-      s.position.y = 1;
-      s.velocity.y = abs(s.velocity.y);
-    }
-
-    if(s.position.y>height) {
-      s.position.y = height-1;
-      s.velocity.y = -abs(s.velocity.y);
-    }
-
-    s.bounce(allSprites);
+   background(220);
+  
+  
+  if (car1.position.x >= width) {
+    car1.position.x = 0;
+    car1.setVelocity(random(3, 10), 0);
   }
+  
 
+  
+  if (frog.bounce(car1)) {
+    sound_hit.play();
+  }
+  
+  // 충돌 시 사운드 효과에 대한 또 다른 방법
+  // frog.collide(car1, playHitSound);
+  // frog.bounce(car1);
+  
+  
+  if (frog.overlap(goal)) {
+    nextLevel();
+  }
+  
+  drawSprites();
+  checkGameOver();
+ 
 }
 
-function mousePressed() {
 
-    sp = createSprite(mouseX, mouseY,30,30);
-    sp.shapeColor = color(random(200,255),random(100,120),random(100,150));
-    sp.setCollider("rectangle");
-    sp.setSpeed(random(2, 3), random(0, 360));
-    sp.scale = random(0.5, 1);
-    sp.mass = sp.scale;
+function keyPressed() {
+  if (keyCode == UP_ARROW) {
+    frog.position.y -= 50;
+  }
+}
+
+
+function checkGameOver() {
+  if (frog.position.x <= 0 || width <= frog.position.x) {
+    fill(255, 0, 0);
+    textSize(60);
+    textAlign(CENTER);
+    text("GAME OVER", width/2, height/2);
+    
+  }
+}
+
+
+function nextLevel() {
+  frog.position.x = width/2;
+  frog.position.y = height-30;
+}
+
+
+function playHitSound() {
+  sound_hit.play();
 }
 
