@@ -4,7 +4,10 @@ let canvasHeight = 400;
 
 let frog;
 let car1;
-let cars[];
+let car2;
+let car3;
+let car4;
+let car5;
 
 let goal;
 let sound_hit;
@@ -67,8 +70,9 @@ function resetGame() {
 
   goal = createSprite(width/2, 0, width, 4);
   car1 = createSprite(0, height/2, 60, 30);
-  
   car1.setVelocity(random(3, 10), 0);
+
+
 }
 
 function keyPressed() {
