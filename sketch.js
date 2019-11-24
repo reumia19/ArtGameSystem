@@ -116,10 +116,10 @@ function bounceFrog(){
       frog.velocity.x = -abs(frog.velocity.x);
     }
 
-    if(frog.position.y<0) {   잠시 보류..
-      frog.position.y = 1;
-      frog.velocity.y = abs(frog.velocity.y);
-    }
+    // if(frog.position.y<0) {   잠시 보류..
+    //   frog.position.y = 1;
+    //   frog.velocity.y = abs(frog.velocity.y);
+    // }
 
     if(frog.position.y>height) {
       frog.position.y = height-1;
