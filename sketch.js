@@ -10,8 +10,6 @@ let car3;
 let car4;
 let car5;
 
-let cars; //차 그룹
-
 let goal;
 let sound_hit;
 
@@ -28,8 +26,7 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
 
-  cars = new Group();
-  cars.add(car1); // 하나는 되나 실험
+
   resetGame();
 
 }
