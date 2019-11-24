@@ -4,6 +4,8 @@ let canvasHeight = 400;
 
 let frog;
 let car1;
+let cars[];
+
 let goal;
 let sound_hit;
 
