@@ -69,10 +69,21 @@ function resetGame() {
   frog.shapeColor = color(cR,cG,100);
 
   goal = createSprite(width/2, 0, width, 4);
-  car1 = createSprite(0, height/2, 60, 30);
+  //차
+  car1 = createSprite(0, 40, 60, 40);
   car1.setVelocity(random(3, 10), 0);
 
+  car2 = createSprite(0, 120, 60, 40);
+  car2.setVelocity(random(3, 10), 0);
 
+  car3 = createSprite(0, 180, 60, 40);
+  car3.setVelocity(random(3, 10), 0);
+
+  car4 = createSprite(0, 250, 60, 40);
+  car4.setVelocity(random(3, 10), 0);
+
+  car5 = createSprite(0, 320, 60, 40);
+  car5.setVelocity(random(3, 10), 0);
 }
 
 function keyPressed() {
