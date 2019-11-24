@@ -96,10 +96,10 @@ function keyPressed() {
 
 function checkGameStart() {
   if (start ==false) {
-    fill(255, 0, 0);
+    fill(250);
     textSize(60);
     textAlign(CENTER);
-    text("PRESS ThE UP ARROW", width/2, height/2);
+    text("PRESS THE UP ARROW", width/2, height/2);
     
   }
 }
