@@ -7,6 +7,10 @@ let car1;
 let goal;
 let sound_hit;
 
+// 개구리 색 설정할 변수
+let cR = 100;
+let cG = 200;
+
 
 function preload() {
   // sound_hit = loadSound('hit.wav');
@@ -51,7 +55,11 @@ function draw() {
 }
 
 function resetGame() {
+  
+
   frog = createSprite(width/2, height-30, 20, 40);
+  frog.shapeColor(cR,cG,100);
+
   goal = createSprite(width/2, 0, width, 4);
   car1 = createSprite(0, height/2, 60, 30);
   
