@@ -27,7 +27,7 @@ function preload() {
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
-
+  sound_hit.play();
 
   resetGame();
 
