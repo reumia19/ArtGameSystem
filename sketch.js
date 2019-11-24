@@ -39,8 +39,9 @@ function draw() {
   
   
   // if (frog.overlap(goal)) {
-    
+
   // }
+  frog.bounce(allSprites);
   
   drawSprites();
   checkGameOver();
