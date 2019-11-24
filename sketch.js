@@ -33,16 +33,14 @@ function setup() {
 
 function draw() {
    background(50);
-
-
-
   // 충돌 시 사운드 효과에 대한 또 다른 방법
   // frog.collide(car1, playHitSound);
   // frog.bounce(car1);
   
   
-  if (frog.overlap(goal)) {
-  }
+  // if (frog.overlap(goal)) {
+    
+  // }
   
   drawSprites();
   checkGameOver();
