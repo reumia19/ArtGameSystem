@@ -58,7 +58,7 @@ function resetGame() {
   
 
   frog = createSprite(width/2, height-30, 20, 40);
-  frog.shapeColor(cR,cG,100);
+  // frog.shapeColor(cR,cG,100);
 
   goal = createSprite(width/2, 0, width, 4);
   car1 = createSprite(0, height/2, 60, 30);
