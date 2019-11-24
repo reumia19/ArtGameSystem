@@ -17,6 +17,7 @@ let sound_hit;
 let cR = 100;
 let cG = 200;
 
+let start = false;
 
 function preload() {
   // sound_hit = loadSound('hit.wav');
@@ -39,7 +40,7 @@ function draw() {
   
   
       frog.position.y -= 1;
-      
+
   // if (frog.overlap(goal)) {
 
   // }
