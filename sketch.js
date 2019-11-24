@@ -51,7 +51,7 @@ function draw() {
     }
 
   drawSprites();
-  // checkGameOver();
+  checkGameStart();
   bounceFrog();
   newCar();
 
@@ -94,12 +94,12 @@ function keyPressed() {
 }
 
 
-function checkGameOver() {
-  if (frog.position.x <= 0 || width <= frog.position.x) {
+function checkGameStart() {
+  if (start ==false) {
     fill(255, 0, 0);
     textSize(60);
     textAlign(CENTER);
-    text("GAME OVER", width/2, height/2);
+    text("PRESS ThE UP ARROW", width/2, height/2);
     
   }
 }
