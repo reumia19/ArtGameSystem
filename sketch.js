@@ -3,11 +3,14 @@ let canvasWidth = 600;
 let canvasHeight = 400;
 
 let frog;
+
 let car1;
 let car2;
 let car3;
 let car4;
 let car5;
+
+let cars; //차 그룹
 
 let goal;
 let sound_hit;
@@ -25,7 +28,8 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
 
-  
+  cars = new Group();
+  cars.add(car1, car2, car3, car4,car5); // 이렇게 써도 되나? 잘 모르겠네..
   resetGame();
 
 }
