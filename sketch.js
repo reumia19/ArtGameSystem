@@ -33,7 +33,30 @@ function setup() {
 
 function draw() {
    background(50);
-  
+
+    if(frog.position.x<0) {
+      frog.position.x = 1;
+      frog.velocity.x = abs(frog.velocity.x);
+    }
+
+    if(frog.position.x>width) {
+      frog.position.x = width-1;
+      frog.velocity.x = -abs(frog.velocity.x);
+    }
+
+    // if(frog.position.y<0) {   잠시 보류..
+    //   frog.position.y = 1;
+    //   frog.velocity.y = abs(frog.velocity.y);
+    // }
+
+    if(frog.position.y>height) {
+      frog.position.y = height-1;
+      frog.velocity.y = -abs(frog.velocity.y);
+    }
+  }
+
+
+
   
   if (car1.position.x >= width) {//                  차 1 ~ 5 까지 화면 끝에 닿으면 돌아오게 해주었다.
     car1.position.x = 0;
