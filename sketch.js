@@ -89,7 +89,7 @@ function resetGame() {
   frog.shapeColor = color(cR,cG,100);
 
   goal = createSprite(width/2, 0, width, 4);
-  goal.shapeColor = color(200,200,0);  
+  goal.shapeColor = color(250,250,0);  
   //차
   car1 = createSprite(0, 40, 60, 40);
   car1.setVelocity(random(3, 10), 0);
