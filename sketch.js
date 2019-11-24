@@ -21,7 +21,6 @@ let start = false;
 
 function preload() {
  sound_hit = loadSound('sound/bounce.wav');
- sound_hit.setVolume(0.5);
 }
 
 function setup() {
@@ -49,8 +48,9 @@ function draw() {
   // }
   if (frog.bounce(allSprites) && cR != 255 && cG != 0) { //.         색이 바뀌게 해줌
       frogColorChange();
+         sound_hit.play();
     }
-  if(frog.bounce(allSprites)){
+  else if(frog.bounce(allSprites)){
     sound_hit.play();
   }
 
@@ -58,6 +58,8 @@ function draw() {
   checkGameStart();
   bounceFrog();
   newCar();
+
+ 
 }
 
 function resetGame() {
