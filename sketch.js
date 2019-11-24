@@ -62,7 +62,7 @@ function draw() {
   }
 
   
-  if (frog.bounce(car1) && cR != 255 && cG != 0) { //.         색이 바뀌게 해줌
+  if (frog.bounce(allSprites) && cR != 255 && cG != 0) { //.         색이 바뀌게 해줌
     // sound_hit.play();
       cR = cR + 50;
       cG = cG - 50;
