@@ -40,6 +40,7 @@ function draw() {
     // sound_hit.play();
       cR = cR + 5;
       cG = cG - 5;
+      frog.shapeColor = color(cR,cG,100);
   }
   
   // 충돌 시 사운드 효과에 대한 또 다른 방법
