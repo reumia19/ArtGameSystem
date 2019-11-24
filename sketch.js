@@ -49,6 +49,9 @@ function draw() {
   if (frog.bounce(allSprites) && cR != 255 && cG != 0) { //.         색이 바뀌게 해줌
       frogColorChange();
     }
+  else if(frog.bounce(allSprites)){
+    sound_hit.play();
+  }
 
   drawSprites();
   checkGameStart();
@@ -113,10 +116,6 @@ function checkGameStart() {
 // }
 
 
-function playHitSound() {//              이것도 안 쓸거긴 한데,,.. 일단 둔다.
-  sound_hit.play();
-}
-
 function bounceFrog(){
     if(frog.position.x<0) {
       frog.position.x = 1;
@@ -172,6 +171,5 @@ function bounceFrog(){
       cR = cR + 5;
       cG = cG - 5;
       frog.shapeColor = color(cR,cG,100);
-      playHitSound();
   }
   
