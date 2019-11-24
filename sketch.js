@@ -63,6 +63,7 @@ function resetGame() {
   //차
   car1 = createSprite(0, 40, 60, 40);
   car1.setVelocity(random(3, 10), 0);
+  car1.immovable = true;
 
   car2 = createSprite(0, 120, 60, 40);
   car2.setVelocity(random(3, 10), 0);
