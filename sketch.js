@@ -67,15 +67,19 @@ function resetGame() {
 
   car2 = createSprite(0, 120, 60, 40);
   car2.setVelocity(random(3, 10), 0);
+  car2.immovable = true;
 
   car3 = createSprite(0, 180, 60, 40);
   car3.setVelocity(random(3, 10), 0);
+  car3.immovable = true;
 
   car4 = createSprite(0, 250, 60, 40);
   car4.setVelocity(random(3, 10), 0);
+  car4.immovable = true;
 
   car5 = createSprite(0, 320, 60, 40);
   car5.setVelocity(random(3, 10), 0);
+  car5.immovable = true;
 }
 
 function keyPressed() {
