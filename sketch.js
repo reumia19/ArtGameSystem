@@ -41,13 +41,15 @@ function draw() {
   // if (frog.overlap(goal)) {
 
   // }
-  frog.bounce(allSprites);
-  
+  if (frog.bounce(allSprites) && cR != 255 && cG != 0) { //.         색이 바뀌게 해줌
+      frogColorChange();
+    }
+
   drawSprites();
-  checkGameOver();
-  // bounceFrog();
+  // checkGameOver();
+  bounceFrog();
   newCar();
-  frogColorChange();
+
  
 }
 
@@ -155,14 +157,8 @@ function bounceFrog(){
  }
 
    function frogColorChange(){
-     
-  
-  if (frog.bounce(allSprites) && cR != 255 && cG != 0) { //.         색이 바뀌게 해줌
-    // sound_hit.play();
       cR = cR + 50;
       cG = cG - 50;
       frog.shapeColor = color(cR,cG,100);
   }
   
-
-   }
