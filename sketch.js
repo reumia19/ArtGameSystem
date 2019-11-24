@@ -110,7 +110,6 @@ function resetGame() {
 
   frog = createSprite(width/2, height-30, 20, 40);
   frog.shapeColor = color(cR,cG,100);
-  frog.setCollider("circle");
   goal = createSprite(width/2, 0, width, 4);
   goal.shapeColor = color(250,250,0);  
   //차
