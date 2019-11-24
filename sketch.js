@@ -48,6 +48,7 @@ function draw() {
   // }
   if (frog.bounce(allSprites) && cR != 255 && cG != 0) { //.         색이 바뀌게 해줌
       frogColorChange();
+         sound_hit.play();
     }
   else if(frog.bounce(allSprites)){
     sound_hit.play();
