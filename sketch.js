@@ -38,6 +38,8 @@ function draw() {
   // frog.bounce(car1);
   
   
+      frog.position.y -= 1;
+      
   // if (frog.overlap(goal)) {
 
   // }
@@ -84,7 +86,7 @@ function resetGame() {
 
 function keyPressed() {
   if (keyCode == UP_ARROW) {
-    frog.position.y -= 50;
+    frog.position.y -= 1;
   }
 }
 
@@ -162,8 +164,8 @@ function bounceFrog(){
  }
 
    function frogColorChange(){
-      cR = cR + 50;
-      cG = cG - 50;
+      cR = cR + 5;
+      cG = cG - 5;
       frog.shapeColor = color(cR,cG,100);
   }
   
