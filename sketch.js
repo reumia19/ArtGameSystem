@@ -89,7 +89,7 @@ function resetGame() {
 
 function keyPressed() {
   if (keyCode == UP_ARROW) {
-    frog.position.y -= 1;
+    start = true;
   }
 }
 
