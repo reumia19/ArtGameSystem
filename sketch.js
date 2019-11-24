@@ -32,7 +32,7 @@ function setup() {
 }
 
 function draw() {
-   background(220);
+   background(150);
   
   
   if (car1.position.x >= width) {//                  차 1 ~ 5 까지 화면 끝에 닿으면 돌아오게 해주었다.
