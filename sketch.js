@@ -29,7 +29,7 @@ function setup() {
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
 
   cars = new Group();
-  // cars.add(car1, car2, car3, car4,car5); // 이렇게 써도 되나? 잘 모르겠네..
+  cars.add(car1); // 하나는 되나 실험
   resetGame();
 
 }
