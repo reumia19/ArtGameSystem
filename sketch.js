@@ -38,8 +38,8 @@ function draw() {
   
   if (frog.bounce(car1) && cR != 255 && cG != 0) {
     // sound_hit.play();
-      cR = cR + 50;
-      cG = cG - 50;
+      cR = cR + 5;
+      cG = cG - 5;
   }
   
   // 충돌 시 사운드 효과에 대한 또 다른 방법
