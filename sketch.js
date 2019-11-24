@@ -38,8 +38,10 @@ function draw() {
   // frog.collide(car1, playHitSound);
   // frog.bounce(car1);
   
-  
-      frog.position.y -= 1;
+  if(start == true){
+    frog.position.y -= 1;
+  }
+
 
   // if (frog.overlap(goal)) {
 
