@@ -34,64 +34,8 @@ function setup() {
 function draw() {
    background(50);
 
-    if(frog.position.x<0) {
-      frog.position.x = 1;
-      frog.velocity.x = abs(frog.velocity.x);
-    }
-
-    if(frog.position.x>width) {
-      frog.position.x = width-1;
-      frog.velocity.x = -abs(frog.velocity.x);
-    }
-
-    // if(frog.position.y<0) {   잠시 보류..
-    //   frog.position.y = 1;
-    //   frog.velocity.y = abs(frog.velocity.y);
-    // }
-
-    if(frog.position.y>height) {
-      frog.position.y = height-1;
-      frog.velocity.y = -abs(frog.velocity.y);
-    }
-  }
 
 
-
-  
-  if (car1.position.x >= width) {//                  차 1 ~ 5 까지 화면 끝에 닿으면 돌아오게 해주었다.
-    car1.position.x = 0;
-    car1.setVelocity(random(3, 10), 0);
-  }
- 
-   if (car2.position.x >= width) {
-    car2.position.x = 0;
-    car2.setVelocity(random(3, 10), 0);
-  }
-
-   if (car3.position.x >= width) {
-    car3.position.x = 0;
-    car3.setVelocity(random(3, 10), 0);
-  }
-
-     if (car4.position.x >= width) {
-    car4.position.x = 0;
-    car4.setVelocity(random(3, 10), 0);
-  }
-
-
-     if (car5.position.x >= width) {
-    car5.position.x = 0;
-    car5.setVelocity(random(3, 10), 0);
-  }
-
-  
-  if (frog.bounce(allSprites) && cR != 255 && cG != 0) { //.         색이 바뀌게 해줌
-    // sound_hit.play();
-      cR = cR + 50;
-      cG = cG - 50;
-      frog.shapeColor = color(cR,cG,100);
-  }
-  
   // 충돌 시 사운드 효과에 대한 또 다른 방법
   // frog.collide(car1, playHitSound);
   // frog.bounce(car1);
@@ -102,6 +46,9 @@ function draw() {
   
   drawSprites();
   checkGameOver();
+  // bounceFrog();
+  newCar();
+  frogColorChange();
  
 }
 
@@ -157,3 +104,66 @@ function playHitSound() {//              이것도 안 쓸거긴 한데,,.. 일�
   sound_hit.play();
 }
 
+function bounceFrog(){
+    if(frog.position.x<0) {
+      frog.position.x = 1;
+      frog.velocity.x = abs(frog.velocity.x);
+    }
+
+    if(frog.position.x>width) {
+      frog.position.x = width-1;
+      frog.velocity.x = -abs(frog.velocity.x);
+    }
+
+    // if(frog.position.y<0) {   잠시 보류..
+    //   frog.position.y = 1;
+    //   frog.velocity.y = abs(frog.velocity.y);
+    // }
+
+    if(frog.position.y>height) {
+      frog.position.y = height-1;
+      frog.velocity.y = -abs(frog.velocity.y);
+    }
+}
+
+ function newCar(){
+
+  if (car1.position.x >= width) {//                  차 1 ~ 5 까지 화면 끝에 닿으면 돌아오게 해주었다.
+    car1.position.x = 0;
+    car1.setVelocity(random(3, 10), 0);
+  }
+ 
+   if (car2.position.x >= width) {
+    car2.position.x = 0;
+    car2.setVelocity(random(3, 10), 0);
+  }
+
+   if (car3.position.x >= width) {
+    car3.position.x = 0;
+    car3.setVelocity(random(3, 10), 0);
+  }
+
+     if (car4.position.x >= width) {
+    car4.position.x = 0;
+    car4.setVelocity(random(3, 10), 0);
+  }
+
+
+     if (car5.position.x >= width) {
+    car5.position.x = 0;
+    car5.setVelocity(random(3, 10), 0);
+  }
+ }
+
+   function frogColorChange(){
+     
+  
+  if (frog.bounce(allSprites) && cR != 255 && cG != 0) { //.         색이 바뀌게 해줌
+    // sound_hit.play();
+      cR = cR + 50;
+      cG = cG - 50;
+      frog.shapeColor = color(cR,cG,100);
+  }
+  
+
+   }
