@@ -35,7 +35,7 @@ function draw() {
    background(220);
   
   
-  if (car1.position.x >= width) {
+  if (car1.position.x >= width) {//                  차 1 ~ 5 까지 화면 끝에 닿으면 돌아오게 해주었다.
     car1.position.x = 0;
     car1.setVelocity(random(3, 10), 0);
   }
@@ -62,7 +62,7 @@ function draw() {
   }
 
   
-  if (frog.bounce(car1) && cR != 255 && cG != 0) {
+  if (frog.bounce(car1) && cR != 255 && cG != 0) { //.         색이 바뀌게 해줌
     // sound_hit.play();
       cR = cR + 50;
       cG = cG - 50;
@@ -74,9 +74,9 @@ function draw() {
   // frog.bounce(car1);
   
   
-  if (frog.overlap(goal)) {
-    nextLevel();
-  }
+  // if (frog.overlap(goal)) {.                 next level로 이동하는 건데 안 쓸것 같아서 주석처리 해줌
+  //   nextLevel();
+  // }
   
   drawSprites();
   checkGameOver();
@@ -114,24 +114,24 @@ function keyPressed() {
 }
 
 
-function checkGameOver() {
-  if (frog.position.x <= 0 || width <= frog.position.x) {
-    fill(255, 0, 0);
-    textSize(60);
-    textAlign(CENTER);
-    text("GAME OVER", width/2, height/2);
+// function checkGameOver() {.                                 게임오버 기능 안 쓸것 같아서 주석처리
+//   if (frog.position.x <= 0 || width <= frog.position.x) {
+//     fill(255, 0, 0);
+//     textSize(60);
+//     textAlign(CENTER);
+//     text("GAME OVER", width/2, height/2);
     
-  }
-}
+//   }
+// }
 
 
-function nextLevel() {
-  frog.position.x = width/2;
-  frog.position.y = height-30;
-}
+// function nextLevel() {.                        next 함수 안 써서 주석처리
+//   frog.position.x = width/2;
+//   frog.position.y = height-30;
+// }
 
 
-function playHitSound() {
+function playHitSound() {//              이것도 안 쓸거긴 한데,,.. 일단 둔다.
   sound_hit.play();
 }
 
