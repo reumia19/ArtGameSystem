@@ -20,7 +20,7 @@ let cG = 200;
 let start = false;
 
 function preload() {
-  // sound_hit = loadSound('hit.wav');
+ sound_hit = loadSound('sound/bounce.wav');
 }
 
 function setup() {
@@ -172,5 +172,6 @@ function bounceFrog(){
       cR = cR + 5;
       cG = cG - 5;
       frog.shapeColor = color(cR,cG,100);
+      playHitSound();
   }
   
