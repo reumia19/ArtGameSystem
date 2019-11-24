@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #C25B7A;
+  background-color: #2c6824;
 }
 canvas {
   display: block;
@@ -20,7 +20,7 @@ canvas {
   height: 220px;
   padding: 10px;
   /* text-align: center; */
-  background-color: #DC93A9;
+  background-color: #26ae13;
 }
 
 #footer {
