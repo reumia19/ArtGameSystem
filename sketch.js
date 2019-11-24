@@ -36,7 +36,7 @@ function draw() {
   
 
   
-  if (frog.bounce(car1)) {
+  if (frog.bounce(car1) && cR != 255 && cG != 0) {
     // sound_hit.play();
       cR = cR + 50;
       cG = cG - 50;
