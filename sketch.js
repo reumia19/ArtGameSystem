@@ -74,9 +74,8 @@ function draw() {
   // frog.bounce(car1);
   
   
-  // if (frog.overlap(goal)) {.                 next level로 이동하는 건데 안 쓸것 같아서 주석처리 해줌
-  //   nextLevel();
-  // }
+  if (frog.overlap(goal)) {
+  }
   
   drawSprites();
   checkGameOver();
@@ -114,15 +113,15 @@ function keyPressed() {
 }
 
 
-// function checkGameOver() {.                                 게임오버 기능 안 쓸것 같아서 주석처리
-//   if (frog.position.x <= 0 || width <= frog.position.x) {
-//     fill(255, 0, 0);
-//     textSize(60);
-//     textAlign(CENTER);
-//     text("GAME OVER", width/2, height/2);
+function checkGameOver() {
+  if (frog.position.x <= 0 || width <= frog.position.x) {
+    fill(255, 0, 0);
+    textSize(60);
+    textAlign(CENTER);
+    text("GAME OVER", width/2, height/2);
     
-//   }
-// }
+  }
+}
 
 
 // function nextLevel() {.                        next 함수 안 써서 주석처리
