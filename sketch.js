@@ -42,7 +42,27 @@ function draw() {
     car1.position.x = 0;
     car1.setVelocity(random(3, 10), 0);
   }
-  
+ 
+   if (car2.position.x >= width) {
+    car2.position.x = 0;
+    car2.setVelocity(random(3, 10), 0);
+  }
+
+   if (car3.position.x >= width) {
+    car3.position.x = 0;
+    car3.setVelocity(random(3, 10), 0);
+  }
+
+     if (car4.position.x >= width) {
+    car4.position.x = 0;
+    car4.setVelocity(random(3, 10), 0);
+  }
+
+
+     if (car5.position.x >= width) {
+    car5.position.x = 0;
+    car5.setVelocity(random(3, 10), 0);
+  }
 
   
   if (frog.bounce(car1) && cR != 255 && cG != 0) {
