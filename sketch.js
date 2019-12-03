@@ -2,8 +2,6 @@ let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
 
-let xCor = ;
-let yCor = ;
 let direction = 'right';
 
 let xCor = 10;
