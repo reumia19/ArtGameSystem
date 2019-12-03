@@ -4,10 +4,10 @@ let canvasHeight = 400;
 
 let xCor = ;
 let yCor = ;
+let direction = 'right';
 
-function preload() {
-  // sound_hit = loadSound('hit.wav');
-}
+let xCor = 10;
+let yCor = 10;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
