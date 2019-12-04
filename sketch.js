@@ -7,16 +7,20 @@ let direction = 'right';
 let xCor = 10;
 let yCor = 10;
 
+let xPos = 10;
+let yPos = 10;
+
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
-  
+  updatePeople();
 }
 
 function draw() {
    background(50);
    rect(xCor,yCor,20,20);
    updateMyCoordinates();
+   newPeople();
 }
 
 function updateMyCoordinates(){
@@ -52,9 +56,15 @@ function keyPressed(){
 }
 
 function newPeople(){
-this.xpos = random(20,canvasWidth-20);
-this.ypos = random(20,canvasHeight-20);
+this.xpos = xPos;
+this.ypos = yPos;
 this.size = 20;
 
 rect(this.xpos,this.ypos,this.size,this.size);
 }
+
+function updatePeople(){
+xPos = random(20,canvasWidth-20);
+yPos = random(20,canvasHeight-20);
+}
+
