@@ -16,6 +16,37 @@ function setup() {
 function draw() {
    background(50);
    rect(xCor,yCor,xCor+10,yCor+10);
-
+   updateMyCoordinates();
 }
 
+function updateMyCoordinates(){
+	switch(direction){
+		case 'right':
+		xCor += 1 ;
+		break;
+		case 'left':
+		xCor -= 1 ;
+		break;
+		case 'up':
+		yCor += 1 ;
+		break;
+		case 'down':
+		yCor -= 1 ;
+		break;
+	}
+}
+
+function keyPressed(){
+	if(keyCode ==37){
+		direction ='left';
+	}
+	if(keyCode ==39){
+		direction ='right';
+	}
+	if(keyCode ==38){
+		direction ='up';
+	}
+	if(keyCode ==40){
+		direction ='down';
+	}
+}
