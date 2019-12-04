@@ -15,7 +15,7 @@ function setup() {
 
 function draw() {
    background(50);
-   rect(xCor,yCor,xCor+10,yCor+10);
+   rect(xCor,yCor,20,20);
    updateMyCoordinates();
 }
 
