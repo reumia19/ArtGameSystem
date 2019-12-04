@@ -44,9 +44,9 @@ function keyPressed(){
 		direction ='right';
 	}
 	if(keyCode ==38){
-		direction ='up';
+		direction ='down';
 	}
 	if(keyCode ==40){
-		direction ='down';
+		direction ='up';
 	}
 }
