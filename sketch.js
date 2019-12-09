@@ -50,6 +50,19 @@ function updateMyCoordinates(){
 		player.position.y -= 1 ;
 		break;
 	}
+
+	if(player.position.x>= width){
+	player.position.x = 20;
+	}
+	if(player.position.x<= 0){
+	player.position.x = width-20;
+	}
+	if(player.position.y>= height){
+	player.position.y = 20;
+	}
+	if(player.position.y<= 0){
+	player.position.y = height-20;
+	}
 }
 
 function keyPressed(){
