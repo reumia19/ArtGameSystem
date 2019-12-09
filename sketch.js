@@ -4,9 +4,6 @@ let canvasHeight = 400;
 
 let direction = 'right';
 
-let xCor = 10;
-let yCor = 10;
-
 let xPos = 10;
 let yPos = 10;
 
@@ -31,23 +28,22 @@ function draw() {
    background(50);
    player.bounce(peoples);
    updateMyCoordinates();
-
+      drawSprites();
 }
 
 function updateMyCoordinates(){
 	switch(direction){
 		case 'right':
-		xCor += 1 ;
+		player.position.x +=1;
 		break;
 		case 'left':
-		xCor -= 1 ;
 		player.position.x -= 1 ;
 		break;
 		case 'up':
 		player.position.y += 1 ;
 		break;
 		case 'down':
-		yCor -= 1 ;
+		player.position.y -= 1 ;
 		break;
 	}
 }
