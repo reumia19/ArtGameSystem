@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #2c6824;
+  background-color: #E5FCC2 ;
 }
 canvas {
   display: block;
@@ -19,8 +19,9 @@ canvas {
   width: 580px;
   height: 220px;
   padding: 10px;
+  color:  #547980;
   /* text-align: center; */
-  background-color: #b4dc8d;
+  background-color: #9DE0AD;
 }
 
 #footer {
@@ -28,6 +29,7 @@ canvas {
     bottom: 15px;
     width: 100%;
     text-align: center;
+    color:  #547980;
 }
 
 a.banner{

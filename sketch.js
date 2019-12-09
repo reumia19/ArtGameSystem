@@ -25,8 +25,8 @@ for(var i =0; i<20; i++)
 }
 
 function draw() {
-   background(50);
-   player.shapeColor = color(140,140,200,alpha);
+   background(69,173,168);
+   player.shapeColor = color(229,252,194,alpha);
 
    if(player.bounce(peoples)){
    	alpha -= 5;
@@ -86,7 +86,7 @@ this.xpos = xPos;
 this.ypos = yPos;
 this.size = 20;
 var people = createSprite(this.xpos,this.ypos,this.size,this.size);
-people.shapeColor = color(200,100,100);
+people.shapeColor = color(100,202,120);
 people.setCollider =('rectangle')
 people.immovable =true;
 peoples.add(people);
@@ -101,6 +101,7 @@ yPos = random(20,canvasHeight-20);
 function checkGameStatus(){
 if(alpha<=0){
 	noLoop();
+
 }
 
 }
