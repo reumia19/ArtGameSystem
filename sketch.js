@@ -28,8 +28,12 @@ function draw() {
    background(50);
    player.bounce(peoples);
    player.shapeColor = color(140,140,200,alpha);
+   if(player.bounce(peoples)){
+   	alpha -= 10;
+   }
+
    updateMyCoordinates();
-      drawSprites();
+   drawSprites();
 }
 
 function updateMyCoordinates(){
