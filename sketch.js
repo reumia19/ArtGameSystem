@@ -33,6 +33,7 @@ function draw() {
    }
    updateMyCoordinates();
    drawSprites();
+   checkGameStatus();
 }
 
 function updateMyCoordinates(){
@@ -95,4 +96,11 @@ peoples.add(people);
 function updatePeople(){
 xPos = random(20,canvasWidth-20);
 yPos = random(20,canvasHeight-20);
+}
+
+function checkGameStatus(){
+if(alpha<=0){
+	noLoop();
+}
+
 }
