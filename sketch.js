@@ -13,7 +13,7 @@ var player;
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
-  
+ 
   peoples = new Group();
 for(var i =0; i<20; i++)
 {
@@ -26,12 +26,11 @@ for(var i =0; i<20; i++)
 
 function draw() {
    background(50);
-   player.bounce(peoples);
    player.shapeColor = color(140,140,200,alpha);
-   if(player.bounce(peoples)){
-   	alpha -= 10;
-   }
 
+   if(player.bounce(peoples)){
+   	alpha -= 5;
+   }
    updateMyCoordinates();
    drawSprites();
 }
@@ -74,6 +73,7 @@ this.ypos = yPos;
 this.size = 20;
 var people = createSprite(this.xpos,this.ypos,this.size,this.size);
 people.shapeColor = color(200,100,100);
+people.setCollider =('rectangle')
 people.immovable =true;
 peoples.add(people);
 
@@ -83,5 +83,3 @@ function updatePeople(){
 xPos = random(20,canvasWidth-20);
 yPos = random(20,canvasHeight-20);
 }
-
-
