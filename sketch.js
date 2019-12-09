@@ -69,12 +69,15 @@ this.xpos = xPos;
 this.ypos = yPos;
 this.size = 20;
 var people = createSprite(this.xpos,this.ypos,this.size,this.size);
+people.shapeColor = (200);
+people.immovable =true;
+peoples.add(people);
+
 }
 
 function updatePeople(){
 xPos = random(20,canvasWidth-20);
 yPos = random(20,canvasHeight-20);
 }
-
 
 
