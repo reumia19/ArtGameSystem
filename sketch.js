@@ -6,9 +6,8 @@ let direction = 'right';
 
 let xPos = 10;
 let yPos = 10;
-
+let alpha =255;
 var peoples;
-
 var player;
 
 function setup() {
@@ -22,11 +21,13 @@ for(var i =0; i<20; i++)
  updatePeople();
 }
    player = createSprite(width/2,height/2,20,20);
+
 }
 
 function draw() {
    background(50);
    player.bounce(peoples);
+   player.shapeColor = color(140,140,200,alpha);
    updateMyCoordinates();
       drawSprites();
 }
@@ -63,17 +64,12 @@ function keyPressed(){
 	}
 }
 
-function drawPlayer(){
-	player = createSprite(xCor,height/2,20,20);
-
-}
-
 function newPeople(){
 this.xpos = xPos;
 this.ypos = yPos;
 this.size = 20;
 var people = createSprite(this.xpos,this.ypos,this.size,this.size);
-people.shapeColor = (200);
+people.shapeColor = color(200,100,100);
 people.immovable =true;
 peoples.add(people);
 
