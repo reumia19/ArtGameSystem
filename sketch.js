@@ -12,6 +12,8 @@ let yPos = 10;
 
 var peoples;
 
+var player;
+
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
@@ -22,13 +24,13 @@ for(var i =0; i<20; i++)
  newPeople();
  updatePeople();
 }
+   player = createSprite(width/2,height/2,20,20);
 }
 
 function draw() {
    background(50);
-   rect(xCor,yCor,20,20);
+   player.bounce(peoples);
    updateMyCoordinates();
-     drawSprites();
 
 }
 
@@ -39,9 +41,10 @@ function updateMyCoordinates(){
 		break;
 		case 'left':
 		xCor -= 1 ;
+		player.position.x -= 1 ;
 		break;
 		case 'up':
-		yCor += 1 ;
+		player.position.y += 1 ;
 		break;
 		case 'down':
 		yCor -= 1 ;
@@ -62,6 +65,11 @@ function keyPressed(){
 	if(keyCode ==40){
 		direction ='up';
 	}
+}
+
+function drawPlayer(){
+	player = createSprite(xCor,height/2,20,20);
+
 }
 
 function newPeople(){
