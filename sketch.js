@@ -10,17 +10,26 @@ let yCor = 10;
 let xPos = 10;
 let yPos = 10;
 
+var peoples;
+
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
-  updatePeople();
+  
+  peoples = new Group();
+for(var i =0; i<20; i++)
+{
+ newPeople();
+ updatePeople();
+}
 }
 
 function draw() {
    background(50);
    rect(xCor,yCor,20,20);
    updateMyCoordinates();
-   newPeople();
+     drawSprites();
+
 }
 
 function updateMyCoordinates(){
@@ -59,12 +68,13 @@ function newPeople(){
 this.xpos = xPos;
 this.ypos = yPos;
 this.size = 20;
-
-rect(this.xpos,this.ypos,this.size,this.size);
+var people = createSprite(this.xpos,this.ypos,this.size,this.size);
 }
 
 function updatePeople(){
 xPos = random(20,canvasWidth-20);
 yPos = random(20,canvasHeight-20);
 }
+
+
 
