@@ -7,6 +7,7 @@ let direction = 'right';
 let xPos = 10;
 let yPos = 10;
 let alpha =255;
+let message;
 var peoples;
 var player;
 
@@ -101,7 +102,10 @@ yPos = random(20,canvasHeight-20);
 function checkGameStatus(){
 if(alpha<=0){
 	noLoop();
-
+    clear();
+   message = createDiv('I dont wana do anything..');
+   message.position(280,height/2);
+   message.style('color','#547980');
 }
 
 }
