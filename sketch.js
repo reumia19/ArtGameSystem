@@ -104,8 +104,9 @@ if(alpha<=0){
 	noLoop();
     clear();
    message = createDiv('I dont wana do anything..');
-   message.position(280,height/2);
+   message.position(width/2,height/2);
    message.style('color','#547980');
+
 }
 
 }
