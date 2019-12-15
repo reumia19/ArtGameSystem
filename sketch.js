@@ -20,6 +20,7 @@ for(var i =0; i<20; i++)
 {
  newPeople();
  updatePeople();
+
 }
    player = createSprite(width/2,height/2,20,20);
 
@@ -32,6 +33,8 @@ function draw() {
    if(player.bounce(peoples)){
    	alpha -= 5;
    }
+
+   lockupPeople();
    updateMyCoordinates();
    drawSprites();
    checkGameStatus();
@@ -93,7 +96,35 @@ people.immovable =true;
 people.setSpeed(1,random(0,179));
 peoples.add(people);
 
+
 }
+
+function lockupPeople(){
+	  for(var i=0; i<peoples.length; i++) {
+    var s = peoples[i];
+    if(s.position.x<0) {
+      s.position.x = 1;
+      s.velocity.x = abs(s.velocity.x);
+    }
+
+    if(s.position.x>width) {
+      s.position.x = width-1;
+      s.velocity.x = -abs(s.velocity.x);
+    }
+
+    if(s.position.y<0) {
+      s.position.y = 1;
+      s.velocity.y = abs(s.velocity.y);
+    }
+
+    if(s.position.y>height) {
+      s.position.y = height-1;
+      s.velocity.y = -abs(s.velocity.y);
+    }
+  }
+}
+
+
 
 function updatePeople(){
 xPos = random(20,canvasWidth-20);
