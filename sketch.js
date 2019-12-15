@@ -90,6 +90,7 @@ var people = createSprite(this.xpos,this.ypos,this.size,this.size);
 people.shapeColor = color(100,202,120);
 people.setCollider =('rectangle')
 people.immovable =true;
+people.setSpeed(1,random(0,179));
 peoples.add(people);
 
 }
