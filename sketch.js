@@ -11,6 +11,7 @@ let message;
 var peoples;
 var myPeoples;
 var player;
+var beforeTime;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
@@ -196,5 +197,10 @@ textSize(20);
      textAlign(CENTER, CENTER);
    message = text('I dont wanna do anything..',width/2,height/2);
 }
+
+}
+
+function heal(){
+
 
 }
