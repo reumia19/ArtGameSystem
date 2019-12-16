@@ -9,19 +9,29 @@ let yPos = 10;
 let alpha =255;
 let message;
 var peoples;
+var myPeoples;
 var player;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
- 
+  myPeoples = new Group();
   peoples = new Group();
-for(var i =0; i<20; i++)
+
+for(var i =0; i<10; i++)
 {
  newPeople();
  updatePeople();
 
 }
+
+for(var i =0; i<5; i++)
+{
+  newMyPeople();
+  updatePeople();
+
+}
+
    player = createSprite(width/2,height/2,20,20);
 
 }
@@ -73,15 +83,19 @@ function updateMyCoordinates(){
 function keyPressed(){
 	if(keyCode ==37){
 		direction ='left';
+		 newPeople();
 	}
 	if(keyCode ==39){
 		direction ='right';
+		 newPeople();
 	}
 	if(keyCode ==38){
 		direction ='down';
+		 newPeople();
 	}
 	if(keyCode ==40){
 		direction ='up';
+		 newPeople();
 	}
 }
 
@@ -96,8 +110,14 @@ people.immovable =true;
 people.setSpeed(1,random(0,179));
 peoples.add(people);
 
+}
+
+function newMyPeople(){
+
 
 }
+
+
 
 function lockupPeople(){
 	  for(var i=0; i<peoples.length; i++) {
