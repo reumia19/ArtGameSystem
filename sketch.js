@@ -188,10 +188,10 @@ function checkGameStatus(){
 if(alpha<=0){
 	noLoop();
     clear();
-   message = createDiv('I dont wanna do anything..');
-   message.position(400,height/2);
-   message.style('color','#547980');
-
+textSize(20);
+  fill(69,173,168);
+     textAlign(CENTER, CENTER);
+   message = text('I dont wanna do anything..',width/2,height/2);
 }
 
 }
