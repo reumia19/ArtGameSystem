@@ -113,7 +113,17 @@ peoples.add(people);
 }
 
 function newMyPeople(){
+this.xpos = xPos;
+this.ypos = yPos;
+this.size = 20;
 
+
+var newPeople = createSprite(this.xpos,this.ypos,this.size,this.size);
+newPeople.shapeColor = color(229,252,120);
+newPeople.setCollider =('rectangle')
+newPeople.immovable =true;
+newPeople.setSpeed(1,random(0,179));
+myPeoples.add(newPeople);
 
 }
 
