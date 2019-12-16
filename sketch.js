@@ -14,6 +14,7 @@ var player;
 var beforeTime;
 
 function setup() {
+  beforeTime = second();
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
   myPeoples = new Group();
@@ -201,6 +202,8 @@ textSize(20);
 }
 
 function heal(){
-
+if(beforeTime <= second()){
+  
+}
 
 }
