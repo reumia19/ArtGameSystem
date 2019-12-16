@@ -205,7 +205,7 @@ textSize(20);
 
 function heal(){
   text(beforeTime,10,10);
-if(beforeTime <= second()){
+if(beforeTime <= second()-2){
 alpha++;
 beforeTime = second();
 }
