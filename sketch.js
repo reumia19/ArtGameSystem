@@ -40,11 +40,6 @@ for(var i =0; i<5; i++)
 
 function draw() {
    background(69,173,168);
-   player.shapeColor = color(229,252,194,alpha);
-
-   if(player.bounce(peoples)){
-   	alpha -= 5;
-   }
 
    lockupPeople();
    lockUpMypeople();
@@ -52,6 +47,12 @@ function draw() {
    drawSprites();
    checkGameStatus();
    heal();
+
+      player.shapeColor = color(229,252,194,alpha);
+
+   if(player.bounce(peoples)){
+    alpha -= 5;
+   }
 }
 
 function updateMyCoordinates(){
