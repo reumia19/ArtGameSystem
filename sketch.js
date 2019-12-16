@@ -45,6 +45,7 @@ function draw() {
    }
 
    lockupPeople();
+   lockUpMypeople();
    updateMyCoordinates();
    drawSprites();
    checkGameStatus();
@@ -152,32 +153,34 @@ function lockupPeople(){
       s.velocity.y = -abs(s.velocity.y);
     }
   }
+}
+
+function lockUpMypeople(){
+
   	  for(var i=0; i<myPeoples.length; i++) {
-    var s = peoples[i];
-    if(s.position.x<0) {
-      s.position.x = 1;
-      s.velocity.x = abs(s.velocity.x);
+    var j = myPeoples[i];
+    if(j.position.x<0) {
+      j.position.x = 1;
+      j.velocity.x = abs(j.velocity.x);
     }
 
-    if(s.position.x>width) {
-      s.position.x = width-1;
-      s.velocity.x = -abs(s.velocity.x);
+    if(j.position.x>width) {
+      j.position.x = width-1;
+      j.velocity.x = -abs(j.velocity.x);
     }
 
-    if(s.position.y<0) {
-      s.position.y = 1;
-      s.velocity.y = abs(s.velocity.y);
+    if(j.position.y<0) {
+      j.position.y = 1;
+      j.velocity.y = abs(j.velocity.y);
     }
 
-    if(s.position.y>height) {
-      s.position.y = height-1;
-      s.velocity.y = -abs(s.velocity.y);
+    if(j.position.y>height) {
+      j.position.y = height-1;
+      j.velocity.y = -abs(j.velocity.y);
     }
   }
 
 }
-
-
 
 function updatePeople(){
 xPos = random(20,canvasWidth-20);
