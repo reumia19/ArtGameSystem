@@ -51,6 +51,7 @@ function draw() {
    updateMyCoordinates();
    drawSprites();
    checkGameStatus();
+   heal();
 }
 
 function updateMyCoordinates(){
@@ -202,8 +203,10 @@ textSize(20);
 }
 
 function heal(){
+  text(beforeTime,10,10);
 if(beforeTime <= second()){
-  
+alpha++;
+beforeTime = second();
 }
 
 }
