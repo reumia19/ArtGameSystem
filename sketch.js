@@ -35,6 +35,7 @@ for(var i =0; i<5; i++)
 }
 
    player = createSprite(width/2,height/2,20,20);
+   player.immovable= true;
 
 }
 
@@ -111,7 +112,7 @@ this.size = 20;
 var people = createSprite(this.xpos,this.ypos,this.size,this.size);
 people.shapeColor = color(100,202,120);
 people.setCollider =('rectangle')
-people.immovable =true;
+// people.immovable =true;
 people.setSpeed(1,random(0,179));
 peoples.add(people);
 
@@ -126,7 +127,7 @@ this.size = 20;
 var newPeople = createSprite(this.xpos,this.ypos,this.size,this.size);
 newPeople.shapeColor = color(229,252,120);
 newPeople.setCollider =('rectangle')
-newPeople.immovable =true;
+// newPeople.immovable =true;
 newPeople.setSpeed(1,random(0,179));
 myPeoples.add(newPeople);
 
