@@ -35,7 +35,7 @@ for(var i =0; i<5; i++)
 }
 
    player = createSprite(width/2,height/2,20,20);
-   player.immovable= true;
+   // player.immovable= true;
 
 }
 
@@ -48,10 +48,11 @@ function draw() {
    drawSprites();
    checkGameStatus();
    heal();
+  player.shapeColor = color(229,252,194,alpha);
+  player.collide(myPeoples);
 
-      player.shapeColor = color(229,252,194,alpha);
 
-   if(player.bounce(peoples)){
+   if(player.collide(peoples)){
     alpha -= 5;
    }
 }
@@ -89,18 +90,22 @@ function updateMyCoordinates(){
 function keyPressed(){
 	if(keyCode ==37){
 		direction ='left';
+    updatePeople();
 		 newPeople();
 	}
 	if(keyCode ==39){
 		direction ='right';
+    updatePeople();
 		 newPeople();
 	}
 	if(keyCode ==38){
 		direction ='down';
+    updatePeople();
 		 newPeople();
 	}
 	if(keyCode ==40){
 		direction ='up';
+    updatePeople();
 		 newPeople();
 	}
 }
@@ -112,7 +117,7 @@ this.size = 20;
 var people = createSprite(this.xpos,this.ypos,this.size,this.size);
 people.shapeColor = color(100,202,120);
 people.setCollider =('rectangle')
-// people.immovable =true;
+people.immovable =true;
 people.setSpeed(1,random(0,179));
 peoples.add(people);
 
@@ -127,7 +132,7 @@ this.size = 20;
 var newPeople = createSprite(this.xpos,this.ypos,this.size,this.size);
 newPeople.shapeColor = color(229,252,120);
 newPeople.setCollider =('rectangle')
-// newPeople.immovable =true;
+newPeople.immovable =true;
 newPeople.setSpeed(1,random(0,179));
 myPeoples.add(newPeople);
 
